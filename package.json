@@ -1,5 +1,5 @@
 {
-  "name": "@nhz-io/nw-treehash",
+  "name": "@nhz.io/nw-treehash",
   "version": "1.0.0",
   "description": "NWJS treehash calculator stream",
   "main": "index.js",
