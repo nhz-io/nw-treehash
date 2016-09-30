@@ -29,12 +29,22 @@ npm i -D @nhz.io/nw-treehash
 // treehash.js
 
 const {createReadStream} = require('fs')
+const through = require('through2')
 const treehash = require('@nhz.io/nw-treehash')
-createReadStream(process.argv[1]).pipe(treehash()).pipe(process.stdout)
+const {fixBase64} = require('@nhz.io/nw-treehash/lib/helpers')
+createReadStream(process.argv[2] || process.argv[1])
+	.pipe(treehash())
+	.pipe(through((hash, enc, cb) =>
+        cb(null, fixBase64(hash.toString('base64')))
+    ))
+	.pipe(process.stdout)
+
 ```
 
 ```bash
 node treehash.js
+...
+7rzmHkbwr5NzPjalKEVuArbxg--rbyt5tXdvMYUHXpQ
 ```
 
 ## Dev
