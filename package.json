@@ -3,6 +3,12 @@
   "version": "1.0.1",
   "description": "NWJS treehash calculator stream",
   "main": "index.js",
+  "bin": {
+    "nw-treehash": "lib/cli.js"
+  },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "start": "ava --watch --verbose",
     "nyc": "xo && nyc --reporter=lcov ava",
@@ -45,6 +51,7 @@
     "nyc": "^8.3.0",
     "open": "0.0.5",
     "pre-push": "^0.1.1",
+    "tempfile": "^1.1.1",
     "xo": "^0.16.0"
   },
   "xo": {
