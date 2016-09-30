@@ -24,7 +24,7 @@
     "nwjs",
     "nw.js",
     "treehash",
-    "nw-treeshash",
+    "nw-treehash",
     "stream",
     "nhz.io"
   ],
@@ -37,7 +37,6 @@
   "dependencies": {
     "choppa": "^1.0.2",
     "duplexer2": "^0.1.4",
-    "merge2": "^1.0.2",
     "through2": "^2.0.1"
   },
   "devDependencies": {
