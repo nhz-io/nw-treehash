@@ -1,0 +1,71 @@
+{
+  "name": "@nhz-io/nw-treehash",
+  "version": "1.0.0",
+  "description": "NWJS treehash calculator stream",
+  "main": "index.js",
+  "scripts": {
+    "start": "ava --watch --verbose",
+    "nyc": "xo && nyc --reporter=lcov ava",
+    "report": "node -e \"require('open')('./coverage/lcov-report/index.html')\"",
+    "coverage": "npm run nyc && npm run report ",
+    "test": "xo && ava --verbose",
+    "prepublish": "xo && ava --verbose",
+    "jsdoc": "jsdoc index.js lib -r README.md -d doc",
+    "viewdoc": "node -e \"require('open')('./doc/index.html')\"",
+    "doc": "npm run jsdoc && npm run viewdoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhz-io/nw-treehash.git"
+  },
+  "pre-push": "test",
+  "keywords": [
+    "nw",
+    "nwjs",
+    "nw.js",
+    "treehash",
+    "nw-treeshash",
+    "stream",
+    "nhz.io"
+  ],
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nhz-io/nw-treehash/issues"
+  },
+  "homepage": "https://github.com/nhz-io/nw-treehash",
+  "dependencies": {
+    "choppa": "^1.0.2",
+    "duplexer2": "^0.1.4",
+    "merge2": "^1.0.2",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "jsdoc": "^3.4.1",
+    "nyc": "^8.3.0",
+    "open": "0.0.5",
+    "pre-push": "^0.1.1",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "space": 4,
+    "semicolon": false,
+    "ignores": [
+      "doc/**",
+      "coverage/**"
+    ],
+    "rules": {
+      "comma-dangle": [
+        1,
+        "always-multiline"
+      ],
+      "no-unused-vars": [
+        1
+      ]
+    }
+  },
+  "directories": {
+    "test": "test"
+  }
+}
