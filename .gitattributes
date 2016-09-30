@@ -21,9 +21,9 @@
 *.html   text
 *.inc    text
 *.ini    text
-*.js     text
-*.jsx    text
-*.json   text
+*.js     text eol=lf
+*.jsx    text eol=lf
+*.json   text eol=lf
 *.less   text
 *.php    text
 *.pl     text
