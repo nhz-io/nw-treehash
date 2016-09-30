@@ -66,6 +66,7 @@
     }
   },
   "directories": {
+    "doc": "doc",
     "test": "test"
   }
 }
